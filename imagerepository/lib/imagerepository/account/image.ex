@@ -5,15 +5,15 @@ defmodule Imagerepository.Account.Image do
   schema "images" do
     field :caption, :string
     field :tag, :string
+    field :url, :string
     belongs_to(:user, ImageRepository.Account.User)
-
     timestamps()
   end
 
   @doc false
   def changeset(image, attrs) do
     image
-    |> cast(attrs, [:tag, :caption, :user_id])
-    |> validate_required([:tag, :caption, :user_id])
+    |> cast(attrs, [:tag, :caption, :url, :user_id])
+    |> validate_required([:tag, :caption, :url, :user_id])
   end
 end
