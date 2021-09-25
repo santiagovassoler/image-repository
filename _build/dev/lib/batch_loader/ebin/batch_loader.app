@@ -1,0 +1,10 @@
+{application,batch_loader,
+             [{applications,[kernel,stdlib,elixir,logger,absinthe]},
+              {description,"Powerful tool to avoid N+1 DB or HTTP queries"},
+              {modules,['Elixir.BatchLoader','Elixir.BatchLoader.Absinthe',
+                        'Elixir.BatchLoader.Absinthe.Middleware',
+                        'Elixir.BatchLoader.Absinthe.Plugin',
+                        'Elixir.BatchLoader.Cache',
+                        'Elixir.BatchLoader.CacheStore']},
+              {registered,[]},
+              {vsn,"0.1.0-beta.6"}]}.
