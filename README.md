@@ -74,6 +74,7 @@ query {
     email
   }
 }
+
 query {
   images(
     filter:{
@@ -87,8 +88,6 @@ query {
     url
     caption
     tag
- }
+  }
 }
-
-
 ```
