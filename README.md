@@ -8,11 +8,15 @@ https://elixir-lang.org/install.html
 PostgreSQL
 https://www.postgresql.org/download/
 
+Create a super user with name `postgres`. If you installed postgres from brew, run this command:
+
+`/usr/local/opt/postgres/bin/createuser -s postgres`
+
 # Installation
 Run `make install` or
 
 To start your Phoenix server:
-
+  * Install local hex with `mix local.hex`
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server`
