@@ -1,13 +1,12 @@
 use Mix.Config
 
+database_url = System.get_env("DATABASE_URL")
+
 # Configure your database
 config :imagerepository, Imagerepository.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "imagerepository_dev",
-  hostname: "localhost",
+  url: database_url,
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 1
 
 # For development, we disable any cache and enable
 # debugging and code reloading.

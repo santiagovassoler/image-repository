@@ -6,3 +6,7 @@ install:
 	
 test:
 	mix test
+
+install-with-docker
+    docker-compose build
+    docker-compose up

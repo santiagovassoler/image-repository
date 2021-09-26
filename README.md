@@ -1,4 +1,9 @@
 # Image Repository 
+Backend application for an image repository. (WIP) Basic implementation: @see [GraphQl](doc:image-repository#readme#GraphQl)
+ - Create user
+ - Search for user
+ - update image
+ - search for image with filters 
 
 # Requirements
 
@@ -13,6 +18,17 @@ Create a super user with name `postgres`. If you installed postgres from brew, r
 `/usr/local/opt/postgres/bin/createuser -s postgres`
 
 # Installation
+
+If not using docker edit the file `config/dev.exs` line 4 to 10 with:
+```
+config :imagerepository, Imagerepository.Repo,
+username: "postgres",
+password: "postgres",
+database: "imagerepository_dev",
+hostname: "localhost",
+show_sensitive_data_on_connection_error: true,
+pool_size: 10
+```
 Run `make install` or
 
 To start your Phoenix server:
@@ -22,6 +38,10 @@ To start your Phoenix server:
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000/graphiql`](http://localhost:4000/graphiql) from your browser.
+
+# Using Docker
+
+Run make install-with-docker
 
 # Tests
 Run `mix test`
