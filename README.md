@@ -1,5 +1,5 @@
 # Image Repository 
-Backend application for an image repository. (WIP) Basic implementation: @see [GraphQl](doc:image-repository#readme#GraphQl)
+This is an image repository backend application. (WIP) Basic implementation: @see [GraphQl](doc:image-repository#readme#GraphQl)
  - Create user
  - Search for user
  - update image
