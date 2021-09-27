@@ -29,6 +29,7 @@ hostname: "localhost",
 show_sensitive_data_on_connection_error: true,
 pool_size: 10
 ```
+
 Run `make install` or
 
 To start your Phoenix server:
@@ -41,7 +42,8 @@ Now you can visit [`localhost:4000/graphiql`](http://localhost:4000/graphiql) fr
 
 # Using Docker
 
-Run make install-with-docker
+Run make `install-with-docker`
+
 
 # Tests
 Run `mix test`
@@ -102,13 +104,10 @@ query {
 
 query {
   images(
-    filter:{
-      caption: "some caption",
-      tag: "some tag",
-      url: "some url"
-    }, 
-  limit: 3, 
-  order: DESC){
+    filter: { caption: "some caption", tag: "some tag", url: "some url" }
+    limit: 3
+    order: DESC
+  ) {
     id
     url
     caption
