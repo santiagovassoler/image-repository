@@ -36,7 +36,7 @@ defmodule ImagerepositoryWeb.Schema do
   end
 
   query do
-    @desc "Get al list of images"
+    @desc "Get a list of images"
     field :images, list_of(:image) do
       arg(:limit, :integer)
       arg(:order, type: :sort_order, default_value: :asc)
