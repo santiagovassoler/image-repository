@@ -87,7 +87,7 @@ mutation{
 } 
 ```
 
-### The above query won't work because we need to send the file. An example using curl:
+### Uploading a file using curl:
 ```
 curl -X POST -F query="mutation{ uploadImage(caption:\"some caption\", tag:\"some, captions\", fileData:\"photo_png\" userId: \"1\"){ id url}}" -F photo_png=@path/to/photo.png localhost:4000/graphiql
 ```
